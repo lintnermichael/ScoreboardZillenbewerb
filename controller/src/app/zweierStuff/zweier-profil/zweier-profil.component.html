@@ -1,0 +1,18 @@
+<mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+    <mat-expansion-panel-header>
+      <mat-panel-title> {{profil.name1}}, {{profil.name2}} - {{fullTime}} </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p>Startnummer: {{profil.startnummer}}</p>
+    <p>Feuerwehr: {{profil.feuerwehr}}</p>
+    <mat-form-field class="example-full-width">
+      <mat-label>Zeit</mat-label>
+      <input matInput placeholder="00:00:000" [(ngModel)]="profil.zeit">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Zeit</mat-label>
+      <input matInput placeholder="0" [(ngModel)]="profil.fehlerpunkte" type="number">
+    </mat-form-field>
+    <br>
+    <button mat-stroked-button (click)="saveChanges()">Speichern</button>
+  </mat-expansion-panel>

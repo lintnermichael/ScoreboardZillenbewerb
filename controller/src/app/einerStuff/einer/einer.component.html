@@ -1,0 +1,17 @@
+<br>
+
+<div class="taskbar">
+  <button mat-raised-button (click)="openAddDialog()">Einer Hinzufügen</button>
+
+  <mat-button-toggle-group [(ngModel)]="sortStyle" (change)="onToggleChange($event)" aria-label="Sortierung">
+    <mat-button-toggle value="2">Startnummer</mat-button-toggle>  
+    <mat-button-toggle value="1">Zeit</mat-button-toggle> 
+  </mat-button-toggle-group>
+</div>
+
+<br>
+
+<div *ngFor="let e of einer; index as i">
+  <app-einer-profil [profil]="e" [id]="i + 1"/>
+  <mat-divider/>
+</div>

@@ -1,0 +1,21 @@
+<mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+    <mat-expansion-panel-header>
+      <mat-panel-title> {{id}} - {{profil.name}} - {{fullTime}} </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-slide-toggle [(ngModel)]="profil.disqualiviziert">disqualiviziert {{profil.disqualiviziert}}</mat-slide-toggle>
+    <div>
+      <p>Startnummer: {{profil.startnummer}}</p>
+      <p>Feuerwehr: {{profil.feuerwehr}}</p>
+      <mat-form-field class="example-full-width">
+        <mat-label>Zeit</mat-label>
+        <input matInput placeholder="00:00:000" [(ngModel)]="profil.zeit">
+      </mat-form-field>
+      <br>
+      <mat-form-field class="example-full-width">
+        <mat-label>Zeit</mat-label>
+        <input matInput placeholder="0" [(ngModel)]="profil.fehlerpunkte" type="number">
+      </mat-form-field>
+    </div>
+    <br>
+    <button mat-stroked-button (click)="saveChanges()">Speichern</button>
+  </mat-expansion-panel>

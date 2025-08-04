@@ -1,0 +1,36 @@
+<h2 mat-dialog-title>Add New Einer</h2>
+
+    <mat-dialog-content>
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Steuermann</mat-label>
+        <input matInput [(ngModel)]="name1" required/>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Kranzlmann</mat-label>
+        <input matInput [(ngModel)]="name2" required/>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Feuerwehr</mat-label>
+        <input matInput [(ngModel)]="feuerwehr" required/>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Startnummer</mat-label>
+        <input matInput type="number" [(ngModel)]="startnummer" required/>
+      </mat-form-field>
+      </mat-dialog-content>
+
+    <mat-dialog-actions align="end">
+    <button mat-button (click)="dialogRef.close()">Abbrechen</button>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="save()"
+    >
+      Speichern
+    </button>
+  </mat-dialog-actions>
+
+

@@ -1,0 +1,4 @@
+<h1>Einzel Heim</h1>
+<mat-list *ngFor="let e of einer; index as i">
+  <mat-list-item>{{i + 1}} - {{e.name}} - {{getFullTime(e.zeit, e.fehlerpunkte)}}</mat-list-item>
+</mat-list>

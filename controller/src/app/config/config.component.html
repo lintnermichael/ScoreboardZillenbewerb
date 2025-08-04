@@ -1,0 +1,12 @@
+<div>
+    <p>Heimfeuerwehr festlegen</p>
+    <mat-form-field>
+        <mat-label>Heimfeuerwehr</mat-label>
+        <input matInput [(ngModel)]="home_ff" placeholder="Heimfeuerwehr">
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" (click)="saveConfig()">Konfiguration speichern</button>
+
+    <p>Download Ergebnisliste</p>
+    <button mat-raised-button color="primary" (click)="downloadResult()">Ergebnisliste herunterladen</button>
+</div>
